@@ -11,7 +11,7 @@ function TeamCard(props) {
   const teamAbbrev = playerData.sports_content.roster.team.team_abbrev;
   const season = playerData.sports_content.roster.season_year;
   console.log(season);
-  // console.log(playerInfo[1].first_name);
+  console.log(playerInfo[1].first_name);
   const espnLink = `https://www.espn.com/nba/team/_/name/${teamAbbrev}/${teamCity}-${teamName}`;
   // const [modalStatus, setModalStatus] = useState(false);
   // const test = "Test modal";
