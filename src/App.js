@@ -69,7 +69,7 @@ function App() {
     <div className="App">
       <select name="team" onChange={handleChanges}>
         <option>---CHOOSE A TEAM---</option>
-        {teams.map((team) => (
+        {teams.sort().map((team) => (
           <option value={team} key={team}>
             {team.toUpperCase()}
           </option>
