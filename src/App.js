@@ -7,13 +7,14 @@ import { data } from "./data/dummyData";
 import { teams } from "./data/teamsArray";
 
 // const URL = `http://data.nba.net/json/cms/noseason/team/${team}/roster.json`;
-console.log(teams);
+
 function App() {
   const [playerData, setPlayerData] = useState(data);
 
   const getRandom = (event) => {
     event.preventDefault();
     const rndmTeam = Math.floor(Math.random() * 30);
+
     axios
       .get(
         `http://data.nba.net/json/cms/noseason/team/${teams[rndmTeam]}/roster.json`
