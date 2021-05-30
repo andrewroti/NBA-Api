@@ -26,8 +26,10 @@ function App() {
   };
 
   const getEastern = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     const rndmTeam = Math.floor(Math.random() * 15);
+    console.log(rndmTeam);
+    console.log(teams[rndmTeam]);
     axios
       .get(
         `http://data.nba.net/json/cms/noseason/team/${teams[rndmTeam]}/roster.json`
@@ -67,7 +69,7 @@ function App() {
     <div className="App">
       <select name="team" onChange={handleChanges}>
         <option>---CHOOSE A TEAM---</option>
-        {teams.sort().map((team) => (
+        {teams.map((team) => (
           <option value={team} key={team}>
             {team.toUpperCase()}
           </option>
